@@ -25,8 +25,11 @@ print(solve(0,0,[]))
 
 
 
+
+
+
 # Move these outside so they are accessible everywhere
-# nums = [5, 9, 4]
+# nums = [5, 8, 6]
 # target = 9
 # def solve(index, total, sub):
 #     if total == target:

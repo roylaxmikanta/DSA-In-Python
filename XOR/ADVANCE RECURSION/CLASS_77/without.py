@@ -18,7 +18,7 @@
 # solve(0,0)
 
 target = 9
-nums = [5, 9, 6] 
+nums = [5, 8, 6] 
 def solve(index, total):
     if total == target:
         return True
