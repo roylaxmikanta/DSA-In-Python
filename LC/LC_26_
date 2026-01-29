@@ -1,0 +1,54 @@
+# class Solution:
+#     def removeDuplicates(self, nums):
+#         answer=[]
+#         n=len(nums)
+#         i=0
+#         while(i<n):
+#             answer.append(nums[i])
+#             j=i+1
+#             while(j<n and nums[i]==nums[j]):
+#                 j+=1
+#             i=j
+#         m=len(answer)
+#         for i in range(n-m):
+#             answer.append('_')
+#         return m,answer
+# s=Solution()
+# print(s.removeDuplicates([0,0,1,1,1,2,2,3,3,4]))
+
+
+# from typing import List
+
+class Solution:
+    def removeDuplicates(self, nums):
+        n = len(nums)
+        if n == 0:
+            return 0
+        write_index = 0
+        i = 0
+        while i < n:
+            nums[write_index] = nums[i]
+            write_index += 1
+            j = i + 1
+            while j < n and nums[i] == nums[j]:
+                j += 1
+            i = j
+        return write_index
+s = Solution()
+k = s.removeDuplicates([1,1,2])
+print(k)
+
+# class Solution:
+#     def removeDuplicates(self, nums):
+#         answer=[]
+#         n=len(nums)
+#         i=0
+#         while(i<n):
+#             answer.append(nums[i])
+#             j=i+1
+#             while(j<n and nums[i]==nums[j]):
+#                 j+=1
+#             i=j
+#         return len(answer)
+# s=Solution()
+# print(s.removeDuplicates([1,1,2]))
