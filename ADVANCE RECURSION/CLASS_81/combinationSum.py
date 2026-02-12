@@ -22,26 +22,37 @@
 
 
 #LEET CODE SOLUTION
-class Solution:
-    def combinationSum(self, candidates, target):
-        answer = []
-        self.solve(0, 0, [], target, candidates, answer)
-        return answer
-    def solve(self,index,total,sub,target,nums,answer):
-        if(total==target):
-            answer.append(sub.copy())
-            return
-        if(index>=len(nums)):
-            return
-        if total > target:
-            return
-        sub.append(nums[index])
-        curr_sum=total+nums[index]
-        self.solve(index,curr_sum,sub,target,nums,answer)
-        sub.pop()
-        self.solve(index+1,total,sub,target,nums,answer)
-        return answer
-s=Solution()
-nums=[2,3,6,7]
-answer=[]
-print(s.combinationSum(nums,7))
+# class Solution:
+#     def combinationSum(self, candidates, target):
+#         answer = []
+#         self.solve(0, 0, [], target, candidates, answer)
+#         return answer
+#     def solve(self,index,total,sub,target,nums,answer):
+#         if(total==target):
+#             answer.append(sub.copy())
+#             return
+#         if(index>=len(nums)):
+#             return
+#         if total > target:
+#             return
+#         sub.append(nums[index])
+#         curr_sum=total+nums[index]
+#         self.solve(index,curr_sum,sub,target,nums,answer)
+#         sub.pop()
+#         self.solve(index+1,total,sub,target,nums,answer)
+#         return answer
+# s=Solution()
+# nums=[2,3,6,7]
+# answer=[]
+# print(s.combinationSum(nums,7))
+
+
+# class Solution:
+#     def isThree(self, n: int) -> bool:
+#         count=0
+#         for i in range(1,n+1):
+#             if n%i==0:
+#                 count+=1
+#         if count==3:
+#             return True
+#         return False
